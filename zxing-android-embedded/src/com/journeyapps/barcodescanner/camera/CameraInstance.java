@@ -104,8 +104,8 @@ public class CameraInstance {
 
     /**
      *
-     * @return the camera rotation relative to display rotation, in degrees. Typically 0 if the
-     *    display is in landscape orientation.
+     * @return the camera rotation relative to display rotation, in degrees.
+     *         Typically 0 if the display is in landscape orientation.
      */
     public int getCameraRotation() {
         return cameraManager.getCameraRotation();
@@ -263,7 +263,8 @@ public class CameraInstance {
     /**
      * Returns the CameraManager used to control the camera.
      *
-     * The CameraManager is not thread-safe, and must only be used from the CameraThread.
+     * The CameraManager is not thread-safe, and must only be used from the
+     * CameraThread.
      *
      * @return the CameraManager used
      */

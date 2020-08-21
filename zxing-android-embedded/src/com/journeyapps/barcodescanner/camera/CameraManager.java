@@ -268,6 +268,15 @@ public final class CameraManager {
         }
 
         CameraConfigurationUtils.setFocus(parameters, settings.getFocusMode(), safeMode);
+        int maxZoom = parameters.getMaxZoom();
+
+        /* CUSTOM CHANGE TO ADD DEFAULT ZOOM */
+        if(maxZoom > 2) {
+            CameraConfigurationUtils.setZoom(parameters, maxZoom);
+        }
+        else {
+            CameraConfigurationUtils.setZoom(parameters, 2.0);
+        }
 
         if (!safeMode) {
             CameraConfigurationUtils.setTorch(parameters, false);
